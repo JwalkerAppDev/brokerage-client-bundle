@@ -1,7 +1,7 @@
 <?php
 
 $header = <<<'HEADER'
-Brokerage Client Bundle
+Brokerage Bundle
 HEADER;
 
 $finder = PhpCsFixer\Finder::create()
@@ -25,7 +25,6 @@ return PhpCsFixer\Config::create()
             'location' => 'after_open',
         ],
         'modernize_types_casting' => true,
-        // 'native_function_invocation' => true,
         'no_extra_consecutive_blank_lines' => [
             'break',
             'continue',

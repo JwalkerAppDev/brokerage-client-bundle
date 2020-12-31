@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Stocks Api
+ * Brokerage Bundle
  */
 
 declare(strict_types=1);
@@ -14,34 +14,34 @@ use Psr\Log\LoggerInterface;
 
 abstract class AbstractBrokerageService implements BrokerageInterface
 {
-	/**
-	 * @var string
-	 */
-	private $baseUrl;
+    /**
+     * @var string
+     */
+    private $baseUrl;
 
-	/**
-	 * @var HttpClient
-	 */
-	private $client;
+    /**
+     * @var HttpClient
+     */
+    private $client;
 
-	/**
-	 * @var $requestFactory
-	 */
-	private $requestFactory;
+    /**
+     * @var
+     */
+    private $requestFactory;
 
-	/**
-	 * @var LoggerInterface
-	 */
-	private $logger;
+    /**
+     * @var LoggerInterface
+     */
+    private $logger;
 
-	public function __construct(
-		string $baseUrl,
-		HttpClient $client,
-		RequestFactory $requestFactory,
-		LoggerInterface $logger
-	) {
-		$this->client = $client;
-		$this->requestFactory = $requestFactory;
-		$this->logger = $logger;
-	}
+    public function __construct(
+        string $baseUrl,
+        HttpClient $client,
+        RequestFactory $requestFactory,
+        LoggerInterface $logger
+    ) {
+        $this->client = $client;
+        $this->requestFactory = $requestFactory;
+        $this->logger = $logger;
+    }
 }

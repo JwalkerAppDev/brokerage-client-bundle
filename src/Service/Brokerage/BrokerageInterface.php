@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Stocks Api
+ * Brokerage Bundle
  */
 
 declare(strict_types=1);

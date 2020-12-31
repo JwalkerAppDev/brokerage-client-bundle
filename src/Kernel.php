@@ -1,7 +1,7 @@
 <?php
 
-/**
- * KaraokePal/Auth
+/*
+ * Brokerage Bundle
  */
 
 declare(strict_types=1);
@@ -19,7 +19,7 @@ class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
 
-    const CONFIG_EXTS  = '.{php,xml,yaml,yml}';
+    const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
     public function getProjectDir(): string
     {
@@ -28,7 +28,7 @@ class Kernel extends BaseKernel
 
     public function registerBundles(): iterable
     {
-        $contents = require $this->getProjectDir() . '/config/bundles.php';
+        $contents = require $this->getProjectDir().'/config/bundles.php';
         foreach ($contents as $class => $envs) {
             if ($envs['all'] ?? $envs[$this->environment] ?? false) {
                 yield new $class();
