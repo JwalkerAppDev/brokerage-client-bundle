@@ -1,6 +1,8 @@
+parameters:
+  stocks_api_brokerage_client.brokerages: '%stocks_api_brokerage_client.brokerages%'
+
 services:
   _defaults:
     autowire: true
     autoconfigure: true
     public: false
-

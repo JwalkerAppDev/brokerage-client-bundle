@@ -225,6 +225,6 @@ class Configuration implements ConfigurationInterface
             ->end()
         ->end();
 
-        return $rootNode;
+        return $treeBuilder;
     }
 }

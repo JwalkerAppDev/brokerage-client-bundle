@@ -30,7 +30,7 @@ class StocksApiBrokerageExtension extends Extension
         );
 
         $container->setParameter(
-            'stocks_api_brokerage.brokerages',
+            'stocks_api_brokerage_client.brokerages',
             $processConfiguration[Config::BROKERAGES]
         );
 
